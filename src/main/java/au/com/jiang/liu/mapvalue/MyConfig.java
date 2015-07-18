@@ -1,7 +1,10 @@
 package au.com.jiang.liu.mapvalue;
 
 import java.io.IOException;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Properties;
 
 import javax.annotation.PostConstruct;
@@ -25,6 +28,8 @@ public class MyConfig {
 	@Qualifier("mapper")
 	private Properties props;
 	
+	private Map<String, Factory> repo;
+	
 	public Map getProps() {
 		return props;
 	}
@@ -34,6 +39,12 @@ public class MyConfig {
 		return new String(value);
 	}
 	
+//	@Bean(name = "repository")
+//	public Map<String, Factory> repository() {
+//		return repo;
+//	}
+
+
 	
 //	@Bean(name = "mapper")
 //	public Properties getMyProperties() throws IOException {System.err.println("Inside getMyproerties");

@@ -62,6 +62,16 @@ public class MyConfig {
 		return new MyBean();
 	}
 	
+	@Bean(name = "reader")
+	public FileReader reader() {
+		return new MyFileReader();
+	}
+	
+	@Bean(name = "areader")
+	public FileReader aReader() {
+		return new AReader();
+	}
+	
 //	@Bean(name = "validator")
 //	public org.springframework.validation.Validator localValidatorFactoryBean() {
 //	   return new LocalValidatorFactoryBean();

@@ -14,11 +14,12 @@ import au.com.gsn.rest.model.Txt;
 import au.com.jiang.liu.mapvalue.Factory;
 import au.com.jiang.liu.mapvalue.MyConfig;
 import au.com.jiang.liu.mapvalue.MyEntity;
+import au.com.jiang.liu.mapvalue.MyFileReader;
 import au.com.jiang.liu.mapvalue.StrategyFactory;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes={MyConfig.class, PostPaidEntityFactory.class, 
-		StrategyFactory.class, AudioPromptFactory.class, TxtFactory.class})
+		StrategyFactory.class, AudioPromptFactory.class, TxtFactory.class, MyFileReader.class})
 public class PostPaidEntityFactoryTest {
 
 	@Autowired
